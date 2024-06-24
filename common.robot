@@ -126,7 +126,7 @@ CRT Local Login
     SetupBrowser                ${url}                      ${browser}
     TypeText                    Username                    ${username}
     TypeSecret                  Password                    ${password}
-    ClickText                   LogIn
+    ClickText                   Log In
     IF                          "${mfa_secret}"!="${EMPTY}"
         ${mfa_code}=            GetOTP                      ${username}                 ${mfa_secret}
         TypeSecret              VerificationCode            ${mfa_code}

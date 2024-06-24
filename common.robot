@@ -172,7 +172,7 @@ Determine Login Strategy
     ${loginStrategy}=           Evaluate                    'CI/CD sysadmin' if '${loginUrl}' and 'frontdoor' in '${loginUrl}' and
     ...                         '${provided_username}' == 'None' and '${provided_password}' == 'None' else ('UserLogin' if '${loginUrl}'
     ...                         and '${provided_username}' != 'None' and '${provided_password}' != 'None' else 'CRTlocal')
-    Log                         Selectedloginstrategy:      ${loginStrategy}            console=true
+    Log                         Selectedloginstrategy: ${loginStrategy}            console=true
     RunKeywordIf                '${loginStrategy}'=='CI/CD sysadmin'                    CI/CD Sysadmin Login        ${loginUrl}               ${browser}
     RunKeywordIf                '${loginStrategy}'=='User Login'                        User Login                  ${loginUrl}               ${provided_username}    ${provided_password}    ${browser}
     RunKeywordIf                '${loginStrategy}'=='CRT local'                         CRT Local Login             ${username}               ${password}             ${browser}

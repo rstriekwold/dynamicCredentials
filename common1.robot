@@ -2,11 +2,7 @@
 Library                         QForce
 Library                         FakerLibrary
 Library                         Collections
-# Library                       QVision
 Library                         String
-Resource                        ${CURDIR}${/}..${/}resources${/}PatientNew.resource
-Variables                       ${CURDIR}${/}..${/}files${/}DefaultPatient.yaml
-
 
 *** Keywords ***
     # Login to Salesforce

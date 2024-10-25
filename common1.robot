@@ -44,7 +44,7 @@ CI/CD Sysadmin Login
     [Arguments]                 ${loginUrl}                 ${browser}
     Log                         Logging in as CI/CD sysadmin...
 
-    Setup Browser               ${loginUrl}                 ${browser}
+    GoTo               ${loginUrl}                 
     ${url}=                     Get Base URL                ${loginUrl}
     Set Global Variable         ${url}                      ${url}
 
@@ -54,7 +54,7 @@ User Login
     Log                         Logging in as user...
 
     ${base_url}=                Get Base URL                ${loginUrl}
-    Setup Browser               ${base_url}                 ${browser}
+    GoTo               ${base_url}                
     TypeText                    Username                    ${username}
     TypeSecret                  Password                    ${password}
     ClickText                   Log In
@@ -72,7 +72,7 @@ CRT Local Login
 
 
     # Assuming ${url} is configured on robot variables.
-    Setup Browser               ${loginUrl}                 ${browser}
+    GoTo               ${loginUrl}                 
     TypeText                    Username                    ${username}
     TypeSecret                  Password                    ${password}
     ClickText                   Log In

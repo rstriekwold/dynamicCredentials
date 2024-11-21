@@ -89,7 +89,7 @@ Get Base URL
     # As we don't want to use the token to login, we need to retrieve the base url to enter the login screen.
     ${parts}=                   Split String                ${loginUrl}                 /
     ${base_url}=                Set Variable                ${parts[0]}//${parts[2]}
-    [Return]                    ${base_url}
+    RETURN                    ${base_url}
 
 
 # Login as HC PAC user
